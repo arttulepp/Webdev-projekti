@@ -1,0 +1,18 @@
+{
+  "name": "isslogging",
+  "version": "1.0.0",
+  "main": "ISSlogging.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ISSlogging.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@google-cloud/storage": "^5.2.0",
+    "express": "^4.17.1",
+    "xmlhttprequest": "^1.8.0"
+  },
+  "description": ""
+}
