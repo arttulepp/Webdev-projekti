@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <script src="https://api.mapbox.com/mapbox.js/v3.3.1/mapbox.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <link href="https://api.mapbox.com/mapbox.js/v3.3.1/mapbox.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="/views/style.css" />
+    
+  </head>
+  <body onload="init()">
+    <h3>ISS Live Tracking</h3>
+    <div class="infoBox">
+      <input type="image" class="showInfo" src="/views/info_icon.png" />
+      <div id="test" class="infoDiv" style="display: none;">
+        <h4>Live ISS tracking made for web-dev course</h4>
+        <p>ISS position updates every 30 seconds</p>
+        <p>Slider changes ISS trail length, which is shown in minutes</p>
+        <p>Input a place name to see next ISS pass times over given place</p>
+        <p>All ISS data from <a id="link" href="http://open-notify.org/" >http://open-notify.org/</a></p>
+        <p>All geodata from <a id="link" href="http://geocode.xyz/api" >http://geocode.xyz/api</a></p>
+      </div>
+    </div>
+    <input type="text" id="textInput" placeholder="Type a place name and press Enter" onkeydown="if (event.keyCode == 13) { loadISSpasstimes() }" />
+    <div id="sliderDiv">
+      <label for="slider" id="sliderValue">90 minutes</label>
+      <input type="range" min="1" max="100" value="40" class="slider" id="slider" />
+    </div>
+    <div id="mapid"></div>
+    <script src="js/script.js"></script>
+  </body>
+</html>
